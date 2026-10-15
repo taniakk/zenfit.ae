@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About ZenFit.ae | Dubai Sports Community & Values</title>
+  <meta name="description" content="Learn about ZenFit.ae, our mission, values, and sports community across Dubai for football, cricket, padel, tennis, and more." />
+  <meta name="keywords" content="about ZenFit.ae, Dubai sports community, football community Dubai, cricket culture, active lifestyle Dubai, sports events, fitness and wellness" />
+  <meta name="author" content="ZenFit.ae" />
+  <meta property="og:title" content="About ZenFit.ae | Dubai Sports Community & Values" />
+  <meta property="og:description" content="Discover how ZenFit.ae connects Dubai athletes through football, cricket, padel, and active community experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/latestImages/one.jpeg" />
+  <meta property="og:site_name" content="ZenFit.ae" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About ZenFit.ae | Dubai Sports Community & Values" />
+  <meta name="twitter:description" content="Learn how ZenFit.ae brings Dubai players together through sport, wellness, and community." />
+  <meta name="twitter:image" content="images/latestImages/one.jpeg" />
+  <link rel="canonical" href="https://zenfit.ae/about-us" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: {
+              deep: '#07100C',
+              mid: '#0B1510',
+              light: '#101914',
+            },
+            bone: {
+              DEFAULT: '#F5F3ED',
+              white: '#FFFFFF',
+              warm: '#ECEAE2',
+            },
+            accent: {
+              green: '#A5D66A',
+              sand: '#D6B46A',
+            },
+            text: {
+              white: '#FFFFFF',
+              light: '#D7DDD8',
+              muted: '#8E9991',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --bg: #F5F3ED;
+      --charcoal: #0B1510;
+      --charcoal-deep: #07100C;
+      --green: #A5D66A;
+      --sand: #D6B46A;
+      --muted: #8E9991;
+      --line: rgba(11, 21, 16, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    html, body{
+      overflow-x: hidden;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .ease-premium { transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    .nav-scrolled {
+      background-color: rgba(7, 16, 12, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .card-lift {
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s;
+    }
+    .card-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+      border-color: rgba(165, 214, 106, 0.3);
+    }
+
+    .img-zoom {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.75rem;
+      background: rgba(11, 21, 16, 0.08);
+    }
+    .img-zoom img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
+      filter: saturate(1.08) contrast(1.02);
+    }
+    .img-zoom:hover img {
+      transform: scale(1.06);
+      filter: saturate(1.15) contrast(1.06);
+    }
+
+    .hero-pattern {
+      background-image:
+        linear-gradient(rgba(165, 214, 106, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(165, 214, 106, 0.06) 1px, transparent 1px);
+      background-size: 38px 38px;
+    }
+
+    .media-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.75rem;
+      box-shadow: 0 25px 55px rgba(7, 16, 12, 0.12);
+      background: #0b1510;
+    }
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7, 16, 12, 0.32), transparent 45%);
+      pointer-events: none;
+    }
+
+    .sports-banner {
+      position: relative;
+      overflow: hidden;
+      background: #0b1510;
+      box-shadow: 0 35px 80px rgba(7, 16, 12, 0.18);
+    }
+    .sports-banner img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.04);
+    }
+    .sports-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(7, 16, 12, 0.88) 0%, rgba(7, 16, 12, 0.64) 45%, rgba(7, 16, 12, 0.68) 100%);
+    }
+    .sports-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.62rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+      color: #f5f3ed;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .sports-tag:hover {
+      transform: translateY(-2px);
+      border-color: rgba(165, 214, 106, 0.45);
+      background: rgba(165, 214, 106, 0.12);
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .soft-border {
+      border: 1px solid var(--line);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-bone text-charcoal-mid">
+
+<!-- ═══════════ TOP RIBBON ═══════════ -->
+<div class="fixed top-0 left-0 right-0 z-[60] bg-charcoal-mid border-b border-white/6 h-10 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-full">
+    <div class="flex items-center justify-between h-full text-[11px] sm:text-xs gap-3 min-w-0">
+
+      <!-- Left — Contact info -->
+      <div class="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+
+        <!-- Phone -->
+        <a href="tel:+971582657975" class="flex items-center gap-1.5 text-text-light hover:text-accent-green transition-colors duration-200 group shrink-0">
+          <i class="fas fa-phone-alt text-accent-green text-[10px] group-hover:scale-110 transition-transform"></i>
+          <span class="font-medium tracking-wide whitespace-nowrap">058 265 7975</span>
+        </a>
+
+        <span class="hidden md:block w-px h-3 bg-white/10 shrink-0"></span>
+
+        <!-- Email -->
+        <a href="mailto:team@zenfit.ae" class="hidden md:flex items-center gap-1.5 text-text-light hover:text-accent-green transition-colors duration-200 group shrink-0">
+          <i class="fas fa-envelope text-accent-green text-[10px] group-hover:scale-110 transition-transform"></i>
+          <span class="font-medium tracking-wide whitespace-nowrap">team@zenfit.ae</span>
+        </a>
+
+        <span class="hidden lg:block w-px h-3 bg-white/10 shrink-0"></span>
+
+       
+
+      </div>
+
+      <!-- Right — Social icons -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="https://instagram.com/zenfit.ae" target="_blank" rel="noopener"
+           aria-label="ZenFit on Instagram"
+           class="w-6 h-6 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/40 hover:bg-accent-green/10 transition-all duration-200">
+          <i class="fab fa-instagram text-[11px]"></i>
+        </a>
+        <a href="https://linkedin.com/company/zenfit-ae" target="_blank" rel="noopener"
+           aria-label="ZenFit on LinkedIn"
+           class="w-6 h-6 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/40 hover:bg-accent-green/10 transition-all duration-200">
+          <i class="fab fa-linkedin-in text-[11px]"></i>
+        </a>
+        <a href="https://wa.me/971582657975" target="_blank" rel="noopener"
+           aria-label="Chat on WhatsApp"
+           class="w-6 h-6 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/40 hover:bg-accent-green/10 transition-all duration-200">
+          <i class="fab fa-whatsapp text-[11px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header id="navbar" class="fixed top-10 left-0 right-0 z-50 py-4 transition-all duration-500 ease-premium">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center gap-4 min-w-0">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-9 h-9 rounded-lg bg-accent-green flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+          <span class="text-charcoal-deep font-black text-base">Z</span>
+        </div>
+        <div class="flex flex-col leading-none">
+          <span class="text-lg font-bold text-white tracking-tight whitespace-nowrap">
+            Zen<span class="text-accent-green">Fit</span><span class="text-white">.ae</span>
+          </span>
+          <span class="text-[9px] text-text-muted tracking-[0.2em] uppercase mt-0.5 font-medium whitespace-nowrap">Dubai Sports</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav — evenly spaced -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 min-w-0">
+        <a href="index.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Home</a>
+        <a href="aboutus.html" class="text-[13px] font-medium text-accent-green hover:text-white transition-colors duration-200 whitespace-nowrap">About</a>
+        <a href="events-activations.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Events & Activations</a>
+        <a href="corporate-team-building.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Team Building</a>
+        <a href="sports-tournaments.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Tournaments</a>
+        <a href="brand-activations.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Brand Activations</a>
+        <a href="registrations.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Registrations</a>
+        <a href="whatwedo.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">What We Do</a>
+        <a href="contact.html" class="text-[13px] font-medium text-text-light hover:text-white transition-colors duration-200 whitespace-nowrap">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all duration-200 focus:outline-none shrink-0" aria-label="Menu" aria-expanded="false">
+        <i id="menu-icon" class="fas fa-bars text-sm"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU PANEL -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden mt-4 rounded-2xl bg-[#1a1a1a]/95 backdrop-blur-xl border border-white/10 shadow-2xl">
+      <nav class="flex flex-col p-4 space-y-1">
+        <a href="index.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Home</a>
+        <a href="aboutus.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-accent-green hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">About</a>
+        <a href="events-activations.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Events & Activations</a>
+        <a href="corporate-team-building.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Team Building</a>
+        <a href="sports-tournaments.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Tournaments</a>
+        <a href="brand-activations.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Brand Activations</a>
+        <a href="registrations.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Registrations</a>
+        <a href="whatwedo.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">What We Do</a>
+        <a href="contact.html" class="mobile-link px-4 py-2.5 text-[15px] font-medium text-text-light hover:text-white rounded-xl hover:bg-white/5 transition-all duration-200">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu styles -->
+<style>
+  .mobile-menu {
+    transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #navbar.scrolled, #navbar.nav-scrolled {
+    background-color: rgba(7, 16, 12, 0.95) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+  #navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  }
+</style>
+
+<script>
+  (function() {
+    const navbar = document.getElementById('navbar');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Navbar background on scroll
+    const handleNavbarScroll = () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+    handleNavbarScroll();
+
+    // Open / close
+    const openMenu = () => {
+      mobileMenu.classList.add('open');
+      menuIcon.classList.remove('fa-bars');
+      menuIcon.classList.add('fa-times');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      menuIcon.classList.remove('fa-times');
+      menuIcon.classList.add('fa-bars');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    const toggleMenu = (e) => {
+      e.stopPropagation();
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Auto-close on scroll (mobile)
+    const handleAutoCloseOnScroll = () => {
+      if (window.innerWidth < 1024 && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    };
+    window.addEventListener('scroll', handleAutoCloseOnScroll, { passive: true });
+
+    // Close on mobile link click
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (mobileMenu.classList.contains('open')) {
+        const isClickInsideMenu = mobileMenu.contains(e.target);
+        const isClickOnButton = menuBtn.contains(e.target);
+        if (!isClickInsideMenu && !isClickOnButton) {
+          closeMenu();
+        }
+      }
+    });
+
+    mobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    // Reset state on restore
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
+  <main>
+  <section class="relative overflow-hidden pt-32 pb-20 sm:pt-36 lg:pt-40 bg-charcoal-deep">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img src="images/latestImages/one.jpeg" alt="ZenFit volleyball tournament group photo with medals" class="w-full h-full object-cover opacity-85" />
+    <div class="absolute inset-0 bg-gradient-to-r from-charcoal-deep via-charcoal-mid/85 to-charcoal-deep/70"></div>
+    <!-- Subtle field grid overlay -->
+    <div class="absolute inset-0 anim-field-grid opacity-20 pointer-events-none"></div>
+  </div>
+
+  <!-- Ambient glow -->
+  <div class="absolute -top-32 -right-20 w-[500px] h-[500px] rounded-full bg-accent-green/8 blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+      <p class="text-[11px] font-bold tracking-[0.22em] uppercase text-accent-green mb-5">About ZenFit</p>
+      <h1 class="text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-black tracking-tight text-white leading-[1.04]">
+        We turn sport into<br>
+        <span class="text-accent-green">connection, energy, and growth.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-[15px] sm:text-[17px] text-text-light leading-relaxed">
+        ZenFit.ae brings together Dubai's athletes, communities, and teams through memorable experiences designed to move people, challenge limits, and build lasting friendships.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#story" class="inline-flex items-center gap-2 bg-accent-green text-charcoal-deep px-6 py-3.5 rounded-xl font-bold hover:bg-white transition-all duration-300 text-sm">
+          Our Story <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+        <a href="#mission" class="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-white/5 transition-all duration-300 text-sm">
+          Mission &amp; Vision
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="story" class="py-20 sm:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+          <div data-aos="fade-right" data-aos-duration="800">
+            <p class="section-label mb-4">Our Story</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal-deep leading-tight">
+              Sport is where communities become stronger.
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-charcoal-light/90">
+              ZenFit.ae was created to make Dubai’s sports culture more accessible, more exciting, and more human. We connect players, teams, and fitness lovers to the places, events, and energy that help them discover their rhythm.
+            </p>
+            <p class="mt-5 text-lg leading-relaxed text-charcoal-light/90">
+              From sunrise runs to after-work padel, our focus is simple: build spaces where people move well, connect naturally, and feel part of something bigger than themselves.
+            </p>
+
+            <div class="mt-8 grid sm:grid-cols-3 gap-4">
+              <div class="rounded-2xl bg-white border border-charcoal/5 p-4 shadow-sm">
+                <div class="text-3xl font-black text-charcoal-deep">120+</div>
+                <div class="mt-2 text-sm font-medium text-charcoal-mid/70">events hosted</div>
+              </div>
+              <div class="rounded-2xl bg-white border border-charcoal/5 p-4 shadow-sm">
+                <div class="text-3xl font-black text-charcoal-deep">32+</div>
+                <div class="mt-2 text-sm font-medium text-charcoal-mid/70">venues across Dubai</div>
+              </div>
+              <div class="rounded-2xl bg-white border border-charcoal/5 p-4 shadow-sm">
+                <div class="text-3xl font-black text-charcoal-deep">13</div>
+                <div class="mt-2 text-sm font-medium text-charcoal-mid/70">sport experiences</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left" data-aos-duration="900">
+            <div class="grid grid-cols-2 gap-4 items-start">
+              <div class="img-zoom h-[420px] shadow-[0_30px_60px_rgba(7,16,12,0.14)]">
+                <img src="images/latestImages/three.jpeg" alt="Large ZenFit volleyball community group" class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-4 pt-8">
+                <div class="img-zoom h-[200px] shadow-[0_30px_60px_rgba(7,16,12,0.14)]">
+                  <img src="images/latestImages/two.jpeg" alt="ZenFit event organizer at volleyball finals" class="w-full h-full object-cover" />
+                </div>
+                <div class="bg-charcoal-deep rounded-[28px] p-6 text-white shadow-[0_30px_60px_rgba(7,16,12,0.2)]">
+                  <div class="text-accent-green text-xs font-bold uppercase tracking-[0.18em] mb-3">Wellness First</div>
+                  <p class="text-lg font-semibold leading-relaxed">
+                    Designed around movement, recovery, teamwork, and confidence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- ═══════════ MISSION & VISION (with background image) ═══════════ -->
+<section id="mission" class="py-20 bg-charcoal-deep text-white relative overflow-hidden">
+
+  <!-- Background image layer -->
+  <div class="absolute inset-0 bg-cover bg-center"
+       style="background-image: url('images/latestImages/four.jpeg');"></div>
+
+  <!-- Dark overlay so text stays readable -->
+  <div class="absolute inset-0 bg-charcoal-deep/80"></div>
+
+  <!-- Existing pattern overlay -->
+  <div class="absolute inset-0 hero-pattern opacity-40"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="800">
+      <p class="section-label mb-4">Mission &amp; Vision</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+        More than fitness. A movement for better living.
+      </h2>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-2 gap-6">
+      <div class="card-lift rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-sm p-8 sm:p-10" data-aos="fade-up" data-aos-duration="800">
+        <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-accent-green text-xl mb-6">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3 class="text-2xl font-black mb-4">Our Mission</h3>
+        <p class="text-base leading-relaxed text-text-light">
+          To foster an active, health-focused culture by creating accessible and high-quality sports experiences that help people connect, challenge themselves, and grow through movement.
+        </p>
+      </div>
+
+      <div class="card-lift rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-sm p-8 sm:p-10" data-aos="fade-up" data-aos-duration="900">
+        <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-accent-green text-xl mb-6">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h3 class="text-2xl font-black mb-4">Our Vision</h3>
+        <p class="text-base leading-relaxed text-text-light">
+          To become Dubai's leading home for sports discovery, community connection, and premium wellness experiences that inspire healthier lifestyles across every generation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="py-20 sm:py-24 bg-bone">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10" data-aos="fade-up" data-aos-duration="800">
+          <p class="section-label mb-4">What We Do</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal-deep leading-tight">
+            Building energy, belonging, and momentum for every athlete.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div class="card-lift rounded-[26px] border border-charcoal/5 bg-white p-6 shadow-sm" data-aos="fade-up" data-aos-duration="700">
+            <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-charcoal-deep text-lg mb-5">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Fitness Experiences</h3>
+            <p class="text-sm leading-relaxed text-charcoal-mid/75">From guided sessions to active challenge events that keep people moving with confidence.</p>
+          </div>
+
+          <div class="card-lift rounded-[26px] border border-charcoal/5 bg-white p-6 shadow-sm" data-aos="fade-up" data-aos-duration="800">
+            <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-charcoal-deep text-lg mb-5">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Community Events</h3>
+            <p class="text-sm leading-relaxed text-charcoal-mid/75">Inclusive gatherings that help teams, clubs, and individuals feel welcomed, motivated, and connected.</p>
+          </div>
+
+          <div class="card-lift rounded-[26px] border border-charcoal/5 bg-white p-6 shadow-sm" data-aos="fade-up" data-aos-duration="900">
+            <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-charcoal-deep text-lg mb-5">
+              <i class="fas fa-volleyball-ball"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Sports Discovery</h3>
+            <p class="text-sm leading-relaxed text-charcoal-mid/75">Explore padel, running, team play, and active social formats built for every level and lifestyle.</p>
+          </div>
+
+          <div class="card-lift rounded-[26px] border border-charcoal/5 bg-white p-6 shadow-sm" data-aos="fade-up" data-aos-duration="1000">
+            <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-charcoal-deep text-lg mb-5">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Corporate & Team Play</h3>
+            <p class="text-sm leading-relaxed text-charcoal-mid/75">Tailored sports programming for companies that want healthier teams and stronger morale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-20 overflow-hidden bg-charcoal-deep text-white">
+      <div class="absolute inset-0 opacity-80">
+        <img src="images/latestImages/seven.jpeg" alt="ZenFit cricket team group photo" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-charcoal-deep via-charcoal-mid/80 to-charcoal-deep/70"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1fr_0.9fr] gap-10 items-center">
+          <div data-aos="fade-right" data-aos-duration="800">
+            <p class="section-label mb-4">Why people choose ZenFit</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              A community-first approach to active living.
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-text-light max-w-xl">
+              We create environments where every session feels energizing, social, and rewarding — whether you are joining for fitness, fun, competition, or personal growth.
+            </p>
+          </div>
+
+          <div class="grid gap-4">
+            <div class="glass rounded-2xl p-5" data-aos="fade-left" data-aos-duration="800">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-accent-green text-lg"><i class="fas fa-heartbeat"></i></div>
+                <div>
+                  <div class="text-xl font-bold">Wellness-led</div>
+                  <div class="text-sm text-text-light">Movement that supports both performance and recovery.</div>
+                </div>
+              </div>
+            </div>
+            <div class="glass rounded-2xl p-5" data-aos="fade-left" data-aos-duration="900">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-accent-green text-lg"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div class="text-xl font-bold">Dubai-focused</div>
+                  <div class="text-sm text-text-light">Community experiences designed around the city’s energy and lifestyle.</div>
+                </div>
+              </div>
+            </div>
+            <div class="glass rounded-2xl p-5" data-aos="fade-left" data-aos-duration="1000">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-accent-green/15 flex items-center justify-center text-accent-green text-lg"><i class="fas fa-handshake"></i></div>
+                <div>
+                  <div class="text-xl font-bold">Built for connection</div>
+                  <div class="text-sm text-text-light">Meet likeminded people and turn sport into meaningful friendships.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-bone">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="800">
+            <p class="section-label mb-4">Our Promise</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal-deep leading-tight">
+              We deliver experiences that feel premium, personal, and unforgettable.
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-charcoal-mid/80">
+              Every event is designed with care — from the venue and program flow to the people, atmosphere, and final experience. That is what makes each session feel more than just activity; it feels like momentum.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <div class="bg-white border border-charcoal/5 rounded-full px-4 py-2 text-sm font-medium text-charcoal-mid">Venue matching</div>
+              <div class="bg-white border border-charcoal/5 rounded-full px-4 py-2 text-sm font-medium text-charcoal-mid">Event coordination</div>
+              <div class="bg-white border border-charcoal/5 rounded-full px-4 py-2 text-sm font-medium text-charcoal-mid">Community-first planning</div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 media-card h-[420px]" data-aos="fade-left" data-aos-duration="900">
+            <img src="images/latestImages/three.jpeg" alt="ZenFit community large group volleyball" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-24 pt-8">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="sports-banner rounded-[32px] text-white">
+          <img src="images/latestImages/nine.jpeg" alt="ZenFit corporate badminton team at INSPO" />
+          <div class="relative z-10 px-6 py-10 sm:px-10 lg:px-14 lg:py-14">
+            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+              <div>
+                <p class="section-label mb-4 text-accent-green">Join Our Community</p>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
+                  Ready to Play in Dubai?
+                </h2>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <span class="sports-tag">Football</span>
+                  <span class="sports-tag">Cricket</span>
+                </div>
+              </div>
+              <div class="lg:text-right">
+                <a href="index.html" class="inline-flex items-center gap-3 bg-accent-green text-charcoal-deep px-7 py-3.5 rounded-full font-bold hover:bg-white transition-all duration-300">
+                  Explore the community <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer class="bg-charcoal-deep pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/6">
+        <div class="lg:col-span-2" data-aos="fade-up" data-aos-duration="600">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-accent-green flex items-center justify-center">
+              <span class="text-charcoal-deep font-black text-base">Z</span>
+            </div>
+            <span class="text-lg font-bold text-white">ZenFit<span class="text-accent-green">.ae</span></span>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed max-w-sm">Dubai's premier sports community & events activation platform. Discover venues, corporate team building, tournaments & brand activations across the UAE.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://instagram.com/zenfit.ae" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/30 transition-all duration-300"><i class="fab fa-instagram text-sm"></i></a>
+            <a href="https://linkedin.com/company/zenfit-ae" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/30 transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
+            <a href="https://wa.me/971582657975" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-green hover:border-accent-green/30 transition-all duration-300"><i class="fab fa-whatsapp text-sm"></i></a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Events & Sports</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="events-activations.html" class="text-text-muted hover:text-accent-green transition-colors">Events & Activations</a></li>
+            <li><a href="corporate-team-building.html" class="text-text-muted hover:text-accent-green transition-colors">Team Building</a></li>
+            <li><a href="sports-tournaments.html" class="text-text-muted hover:text-accent-green transition-colors">Sports Tournaments</a></li>
+            <li><a href="brand-activations.html" class="text-text-muted hover:text-accent-green transition-colors">Brand Activations</a></li>
+            <li><a href="registrations.html" class="text-text-muted hover:text-accent-green transition-colors">Event Registrations</a></li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="aboutus.html" class="text-text-muted hover:text-accent-green transition-colors">About ZenFit</a></li>
+            <li><a href="whatwedo.html" class="text-text-muted hover:text-accent-green transition-colors">What We Do</a></li>
+            <li><a href="index.html#venues" class="text-text-muted hover:text-accent-green transition-colors">Our Venues</a></li>
+            <li><a href="index.html#communities" class="text-text-muted hover:text-accent-green transition-colors">Communities</a></li>
+            <li><a href="contact.html" class="text-text-muted hover:text-accent-green transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <h4 class="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Contact & Support</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="tel:+971582657975" class="text-text-muted hover:text-accent-green transition-colors"><i class="fas fa-phone-alt text-accent-green mr-1.5 text-xs"></i> 058 265 7975</a></li>
+            <li><a href="https://wa.me/971582657975" target="_blank" rel="noopener" class="text-text-muted hover:text-accent-green transition-colors"><i class="fab fa-whatsapp text-accent-green mr-1.5 text-xs"></i> WhatsApp Direct</a></li>
+            <li><a href="mailto:team@zenfit.ae" class="text-text-muted hover:text-accent-green transition-colors"><i class="fas fa-envelope text-accent-green mr-1.5 text-xs"></i> team@zenfit.ae</a></li>
+            <li><a href="contact.html" class="text-text-muted hover:text-accent-green transition-colors">Book An Event</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted">
+        <p>© 2026 ZenFit.ae — Dubai's Premier Sports & Event Activations Platform. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <span><i class="fas fa-map-marker-alt text-accent-green mr-1.5"></i> Dubai, UAE</span>
+          <a href="tel:+971582657975" class="hover:text-accent-green transition-colors"><i class="fas fa-phone-alt text-accent-green mr-1.5"></i> 058 265 7975</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 30, duration: 700, easing: 'ease-out-cubic' });
+  </script>
+</body>
+</html>
