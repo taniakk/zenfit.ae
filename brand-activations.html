@@ -347,16 +347,31 @@
 
 <script>
   AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+
   (function() {
     const navbar = document.getElementById('navbar');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuBtn = document.getElementById('mobile-menu-btn');
     const menuIcon = document.getElementById('menu-icon');
 
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
+      // Navbar background
       if (window.scrollY > 30) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
-    });
+
+      // Auto-close mobile menu on scroll (mobile only)
+      if (window.innerWidth < 1024 &&
+          mobileMenu.classList.contains('open') &&
+          Math.abs(window.scrollY - lastScrollY) > 5) {
+        mobileMenu.classList.remove('open');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      }
+
+      lastScrollY = window.scrollY;
+    }, { passive: true });
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');

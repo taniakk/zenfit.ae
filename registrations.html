@@ -472,58 +472,30 @@
 <script>
   AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
 
-  function switchTab(tabName) {
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('form').forEach(f => f.classList.add('hidden'));
-
-    document.getElementById(`tab-${tabName}`).classList.add('active');
-    document.getElementById(`form-${tabName}`).classList.remove('hidden');
-  }
-
-  let lastCategorySubmitted = 'Events Inquiry';
-
-  function handleFormSubmit(e, category) {
-    e.preventDefault();
-    lastCategorySubmitted = category;
-    const modal = document.getElementById('success-modal');
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-  }
-
-  function closeModal() {
-    const modal = document.getElementById('success-modal');
-    modal.classList.add('opacity-0', 'pointer-events-none');
-  }
-
-  function sendWhatsApp(category) {
-    const msg = encodeURIComponent(`Hi ZenFit Team, I'm submitting an inquiry for: ${category}. Please send me proposal details.`);
-    window.open(`https://wa.me/971582657975?text=${msg}`, '_blank');
-  }
-
-  function redirectToWhatsAppFromModal() {
-    sendWhatsApp(lastCategorySubmitted);
-    closeModal();
-  }
-
-  // URL query parameter auto-tab trigger
   (function() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.has('event') || params.has('sport')) {
-      switchTab('tournament');
-    } else if (params.has('package') && params.get('package') === 'brand') {
-      switchTab('brand');
-    } else if (params.has('package') || params.has('type')) {
-      switchTab('corporate');
-    }
-
     const navbar = document.getElementById('navbar');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuBtn = document.getElementById('mobile-menu-btn');
     const menuIcon = document.getElementById('menu-icon');
 
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
+      // Navbar background
       if (window.scrollY > 30) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
-    });
+
+      // Auto-close mobile menu on scroll (mobile only)
+      if (window.innerWidth < 1024 &&
+          mobileMenu.classList.contains('open') &&
+          Math.abs(window.scrollY - lastScrollY) > 5) {
+        mobileMenu.classList.remove('open');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      }
+
+      lastScrollY = window.scrollY;
+    }, { passive: true });
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
