@@ -220,7 +220,7 @@
   <!-- HERO SECTION -->
   <section class="relative min-h-[45vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-charcoal-deep text-white">
     <div class="absolute inset-0 z-0 overflow-hidden">
-      <img src="images/latestImages/ten.jpeg" alt="ZenFit Event Registration — massive sports arena crowd" class="w-full h-full object-cover opacity-35 anim-kenburns" />
+      <img src="https://ik.imagekit.io/iuiy6mihw/zenfit.ae/zenfit_team1.jpeg" alt="ZenFit Event Registration — massive sports arena crowd" class="w-full h-full object-cover opacity-35 anim-kenburns" />
       <div class="absolute inset-0 bg-gradient-to-t from-charcoal-deep via-charcoal-deep/80 to-charcoal-deep/60"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center pt-8">
@@ -489,39 +489,113 @@
 </footer>
 
 <script>
-  AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+  // ---- AOS (guarded) ----
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+  }
 
+  // ---- NAVBAR ----
   (function() {
     const navbar = document.getElementById('navbar');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuBtn = document.getElementById('mobile-menu-btn');
     const menuIcon = document.getElementById('menu-icon');
-
     let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
-      // Navbar background
+      if (!navbar) return;
       if (window.scrollY > 30) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
 
-      // Auto-close mobile menu on scroll (mobile only)
-      if (window.innerWidth < 1024 &&
+      if (window.innerWidth < 1024 && mobileMenu &&
           mobileMenu.classList.contains('open') &&
           Math.abs(window.scrollY - lastScrollY) > 5) {
         mobileMenu.classList.remove('open');
         menuIcon.classList.remove('fa-times');
         menuIcon.classList.add('fa-bars');
       }
-
       lastScrollY = window.scrollY;
     }, { passive: true });
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
-    });
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
+      });
+    }
   })();
+
+  // ---- TAB SWITCHING ----
+  function switchTab(tab) {
+    const ids = ['corporate', 'tournament', 'brand'];
+    ids.forEach(t => {
+      const btn  = document.getElementById('tab-' + t);
+      const form = document.getElementById('form-' + t);
+      if (!btn || !form) return;
+      const isActive = (t === tab);
+      btn.classList.toggle('active', isActive);
+      form.classList.toggle('hidden', !isActive);
+    });
+  }
+
+  // ---- FORM SUBMIT ----
+  function handleFormSubmit(event, type) {
+    event.preventDefault();
+    console.log('Form submitted:', type);
+    const modal = document.getElementById('success-modal');
+    if (!modal) return;
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+  }
+
+  // ---- WHATSAPP ----
+  function sendWhatsApp(type) {
+    let message = '';
+    if (type === 'Corporate Team Building') {
+      const g = id => document.getElementById(id)?.value || '';
+      message = `*Corporate Team Building Inquiry*%0A`
+        + `Company: ${g('corp-company')}%0A`
+        + `Contact: ${g('corp-name')}%0A`
+        + `Email: ${g('corp-email')}%0A`
+        + `Phone: ${g('corp-phone')}%0A`
+        + `Staff Count: ${g('corp-size')}%0A`
+        + `Format: ${g('corp-format')}%0A`
+        + `Notes: ${g('corp-notes')}`;
+    }
+    if (type === 'Tournament Squad Entry') {
+      const g = id => document.getElementById(id)?.value || '';
+      message = `*Tournament Squad Entry*%0A`
+        + `Team: ${g('tourn-team')}%0A`
+        + `Captain: ${g('tourn-captain')}%0A`
+        + `Sport: ${g('tourn-sport')}%0A`
+        + `Phone: ${g('tourn-phone')}%0A`
+        + `Notes: ${g('tourn-notes')}`;
+    }
+    if (type === 'Brand Activation Brief') {
+      const g = id => document.getElementById(id)?.value || '';
+      message = `*Brand Activation Brief*%0A`
+        + `Brand: ${g('brand-name')}%0A`
+        + `Contact: ${g('brand-contact')}%0A`
+        + `Type: ${g('brand-type')}%0A`
+        + `Phone: ${g('brand-phone')}%0A`
+        + `Notes: ${g('brand-notes')}`;
+    }
+    window.open(`https://wa.me/971582657975?text=${message}`, '_blank');
+  }
+
+  // ---- MODAL ----
+  function closeModal() {
+    const modal = document.getElementById('success-modal');
+    if (!modal) return;
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+  }
+
+  function redirectToWhatsAppFromModal() {
+    window.open('https://wa.me/971582657975', '_blank');
+    closeModal();
+  }
 </script>
 </body>
 </html>
